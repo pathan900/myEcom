@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        {% block css %} 
+        
+        {% endblock %}
+
+        .top-footer{
+    background-color:#2c3e50 ;
+    color: white;
+}
+.top-footer a{
+
+    color: white;
+    font-weight: 300;
+}
+.bottom-footer{
+    background-color:#000e1b ;
+    color: white;
+}
+
+
+.goontop{
+    background-color:#000e1b ;
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/shop">MyEcom Site</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="/shop">Home</a></li>
+        <li class="nav-item "><a class="nav-link" href="/shop/about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="/shop/contact">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="/shop/tracker">Tracker</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+    </ul>
+    <form method="get" action="/shop/search/" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+      <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-toggle="popover" data-content="Vivanus sagittis lacus" data-placement="bottom" data-html="true">Cart(<span id="cart">0</span>)</button>
+      <span class="clr"><button class='btn btn-danger clear' id='clear'>Clear Cart</button></span>
+  </div>
+ </nav>
+
+{% block body %} {% endblock%}
+{% load static %}
+
+
+    <section class="goontop text-center">
+      <div class="container p-1">
+        <h4><a href="#">Go On Top</a></h4>
+      </div>
+    </section>
+
+      <footer>
+    <div class="top-footer p-md-1 p-1">
+      <div class="container">
+        <div class="row p-1">
+          <div class="col-md-3">
+            {% comment %} <img class="img-fluid" src="{% static 'shop/analytics.png' %}" alt=""> {% endcomment %}
+              <h2>My Ecom</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga repellat sapiente pariatur, nulla quos
+              rerum laborum aut aalu aalu <a href="">Read more...</a>
+            <a style="color: silver;" class="p-1" href=""><i class="fab fa-2x fa-facebook"></i></a>
+            <a style="color: silver;" class="p-1" href=""><i class="fab fa-2x fa-google-plus-square"></i></a>
+            <a style="color: silver;" class="p-1" href=""><i class="fab fa-2x fa-twitter-square"></i></a>
+            <a style="color: silver;" class="p-1" href=""><i class="fab fa-2x fa-instagram"></i></a>
+          </div>
+          <div class="col-md-3">
+            <h4>
+              Important Links
+            </h4>
+            <a href="/shop/about">About Us</a><br>
+            <a href="">Careers</a><br>
+            <a href="">Press Releases</a><br>
+            <a href="">MySite Cares</a><br>
+              <a href="">Gift A Smile</a><br>
+          </div>
+          <div class="col-md-3">
+            <h4>
+              Make Money With Us
+            </h4>
+            <a href="">Sell On Mysite</a><br>
+            <a href="">Become An Affiliate</a><br>
+            <a href="">Advertise Your Product</a><br>
+            <a href="">Fulfilment By MyEcom</a><br>
+            <a href="">Sell under MyEcom Accelerator</a>
+          </div>
+          <div class="col-md-3">
+            <h4>
+              Contact Us
+            </h4>
+            <a href="+(91) 7240454561"> <i class="fas fa-phone"></i>+(91) 7240454561</a><br>
+            <a href="momentum@gmail.com"><i class="fas fa-envelope"></i> myecom@gmail.com</a>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58021.31925262383!2d77.27713487064045!3d24.646682506284975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397a5bf458847367%3A0xb3c7404fc9cfb52a!2sHotel%20Varun!5e0!3m2!1sen!2sin!4v1598415031163!5m2!1sen!2sin"
+                frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-footer container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyrights 2020 - All rights reserved </p>
+            <p>India--Australia--Brazil--Canada--China--France--Germany--Italy--Japan--Mexico--Netherlands--Singapore--Spain--UnitedArabEmirates--UnitedKingdom--UnitedStates</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+     {% block js %}
+
+
+
+
+ {% endblock %}
+</body>
+</html>

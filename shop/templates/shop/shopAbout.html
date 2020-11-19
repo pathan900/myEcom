@@ -1,0 +1,62 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %}shop about {% endblock%}
+
+{% block body %}
+
+ <section class="breadcrumbs-section">
+    <div class="container p-1 p-sm-3">
+      <div class="row">
+        <div class="col-12">
+          <h2>About Us</h2>
+
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/shop">Home</a></li>
+            <li class="breadcrumb-item">About Us</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+<div class="jumbotron container p-3">
+  <h1 class="display-3">Welcome To MyEcom!</h1>
+  <p class="lead"> MyEcom, is an Indian multinational technology company based in Seattle, Washington. MyCom focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It is considered one of the Big Four technology companies, along with Google, Apple, and Facebook.It has been referred to as "one of the most influential economic and cultural forces in the world" as well as the world's most valuable brand.</p>
+  <hr class="my-4">
+  <p> My Eom is known for its disruption of well-established industries through technological innovation and mass scale.It is the world's largest online marketplace, AI assistant provider, live-streaming platform and cloud computing platform as measured by revenue and market capitalization. MyEcom is the largest Internet company by revenue in the world. It is the second largest private employer in the United States and one of the world's most valuable companies.
+
+MyEcom was founded by Abdul Kaleem Khan in Bhopal, India, on November 10, 2000. The company started as an online marketplace for books but expanded to sell electronics, software, video games, apparel, furniture, food, toys, and jewelry. In 2015, MyEcom surpassed Walmart as the most valuable retailer in the United States by market capitalization.In 2017, MyEcom acquired Whole Foods Market for US$13.4 billion, substantially increasing Amazon's footprint as a physical retailer. In 2018, Bezos announced that its two-day delivery service, Amazon Prime, had surpassed 100 million subscribers worldwide.
+
+MyEcom distributes downloads and streaming of video, music, and audiobooks through its Prime Video, MyEcom Music, Twitch, and Audible subsidiaries. MyEcom also has a publishing arm, MyEcom Publishing, a film and television studio, MyEcom Studios, and a cloud computing subsidiary, MyEcom Web Services. It produces consumer electronics including Kindle e-readers, Fire tablets, Fire TV, and Echo devices. In addition, MyEcom acquisitions include Ring, Twitch, Whole Foods Market, and IMDb. Among various controversies, the company has been criticized for technological surveillance overreach, a hyper-competitive and demanding work culture, tax avoidance, and anti-competitive practices.</p>
+  <a class="btn btn-primary btn-lg " href="#" role="button">Learn more</a>
+</div>
+
+
+{% endblock%}
+
+
+ {% block js %}
+<script>
+  sum = 0
+    if(localStorage.getItem('cart')== null){
+        var cart = {};
+    }
+    else{
+        cart = JSON.parse(localStorage.getItem('cart'));
+          document.getElementById('cart').innerHTML = Object.keys(cart).length;
+    }
+    for (item in cart) {
+            var name = cart[item][1];
+            var qty = cart[item][0];
+            sum = sum + qty;
+
+    }
+        document.getElementById('cart').innerHTML = sum;
+      
+ 
+</script>
+
+{% endblock %}

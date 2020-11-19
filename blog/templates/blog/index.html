@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            animation: text 3s steps(35) ;
+            overflow: hidden;
+            white-space: nowrap;
+            font-family: sans-serif;
+            border-right: 4px solid black;
+            width: 35ch;
+            padding-right: 30px;
+        }
+        @keyframes text{
+            0%{
+                width: 0ch;
+            }
+            100%{
+                width: 35ch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Work under process, we will be back soon.</h1>
+    <script>
+        var str=document.getElementsByTagName('h1')
+        var len=str.length
+        console.log(len)
+    </script>
+</body>
+</html>
